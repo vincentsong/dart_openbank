@@ -1,3 +1,4 @@
-## WIP [0.0.1] 
+## WIP [0.0.2]
 
-* Initial release with simple code and test.  
+* Added protobuf and json decoding
+* More unit tests
