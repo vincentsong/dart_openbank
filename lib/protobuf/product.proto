@@ -1,0 +1,21 @@
+syntax = "proto3";
+package Dart_OpenBank;
+
+message Product {
+    string productId = 1;
+    string lastUpdated = 2;
+    enum Category {
+        TRANS_AND_SAVINGS_ACCOUNTS = 0;
+        TERM_DEPOSITS = 1;
+        TRAVEL_CARDS = 2;
+        REGULATED_TRUST_ACCOUNTS = 3;
+        RESIDENTIAL_MORTGAGES = 4;
+        CRED_AND_CHRG_CARDS = 5;
+        PERS_LOANS = 6;
+    }
+    Category productCategory = 3;
+    string name = 4;
+    string description = 5;
+    string brand = 6;
+    bool isTailored = 7;
+}

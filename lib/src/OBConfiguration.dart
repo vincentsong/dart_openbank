@@ -6,9 +6,15 @@ class OBConfiguration {
   final String version;
 
   OBConfiguration(this.name, this.baseUrl, this.version);
+}
 
-  // ignore: non_constant_identifier_names
-  static OBConfiguration ANZConfiguration() => new OBConfiguration(
-         "ANZ", Uri.parse("https://api.anz/cds-au"), "1"
-      );
+class ANZConfiguration implements OBConfiguration {
+  @override
+  Uri get baseUrl => Uri.parse("https://api.anz/cds-au");
+
+  @override
+  String get name => "ANZ";
+
+  @override
+  String get version => "1";
 }

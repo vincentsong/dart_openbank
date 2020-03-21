@@ -1,0 +1,26 @@
+syntax = "proto3";
+package Dart_OpenBank;
+
+import "product.proto";
+
+message ProductList {
+
+    message Data {
+        repeated Product products = 1;
+    }
+    Data data = 1;
+
+    message Links {
+        string self = 1;
+        string first = 2;
+        string next = 3;
+        string last = 4;
+    }
+    Links links = 2;
+
+    message Meta {
+        int32 totalRecords = 1;
+        int32 totalPages = 2;
+    }
+    Meta meta = 3;
+}
